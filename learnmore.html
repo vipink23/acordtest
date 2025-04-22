@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Styled Button</title>
+    <style>
+      .button-wrapper {
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+      }
+
+      .button-container {
+        display: inline-flex;
+        align-items: center;
+        padding: 0;
+      }
+
+      .button-text {
+        background: linear-gradient(to right, #37518e, #5184cf);
+        color: white;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        width: 180px;
+        white-space: nowrap;
+      }
+
+      .tag {
+        position: absolute;
+        top: -2px;
+        right: 55px;
+        background: rgb(171, 38, 38);
+        color: white;
+        font-size: 10px;
+        padding: 2px 8px;
+        border-radius: 20px;
+        background: white;
+        white-space: nowrap;
+      }
+      .tag2 {
+        position: absolute;
+        bottom: 0;
+        right: 55px;
+        background: rgb(171, 38, 38);
+        color: white;
+        font-size: 10px;
+        padding: 2px 8px;
+        border-radius: 10px;
+        background: rgb(255, 255, 255);
+        white-space: nowrap;
+      }
+      .circle11 {
+        position: absolute;
+        height: 12px;
+        width: 30px;
+        background: transparent;
+        /* background: red; */
+        border-top-right-radius: 60px;
+        box-shadow: rgb(255, 255, 255) 10px 0px;
+      }
+      .circle1 {
+        top: 0px;
+        left: 130px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button-wrapper">
+      <div class="tag">TAG</div>
+      <div class="button-container">
+        <div class="button-text">LEARN MORE</div>
+        <div class="circle11 circle1"></div>
+        <div class="circle11 circle2">2</div>
+        <div class="circle22 circle3">3</div>
+      </div>
+      <div class="tag2">TAG</div>
+    </div>
+  </body>
+</html>

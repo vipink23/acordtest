@@ -1,0 +1,83 @@
+/* style.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #cccccc; /* Neutral background for viewing the card */
+    font-family: 'Poppins', sans-serif; /* Using Poppins font - visually similar */
+}
+
+.card {
+    width: 380px; /* Adjusted width slightly */
+    height: 220px; /* Adjusted height slightly */
+    border-radius: 35px; /* Slightly increased rounding */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 25px 35px; /* Adjusted padding */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    color: white;
+    position: relative;
+
+    /* --- OPTION 1: CSS Approximation of the Background --- */
+    /* This uses gradients to try and mimic the image's background */
+    background-color: #05080a; /* Dark base fallback */
+    background-image:
+        /* Layer 1: Brighter Blue/Cyan top-right highlight */
+        radial-gradient(ellipse at 95% 5%, rgba(60, 170, 210, 0.45) 0%, rgba(60, 170, 210, 0) 50%),
+        /* Layer 2: Subtle dark central shape */
+        radial-gradient(circle at 55% 50%, rgba(10, 20, 25, 0.5) 0%, rgba(10, 20, 25, 0) 65%),
+        /* Layer 3: Base gradient with darker right side */
+        linear-gradient(115deg, #184861 0%, #0f2d3f 50%, #071318 100%);
+    background-size: 100% 100%, 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+
+    /* --- OPTION 2: Using an Actual Background Image --- */
+    /* If you HAVE the exact background as an image file (e.g., 'card-background.jpg'), */
+    /* comment out Option 1 (above) and uncomment these lines: */
+    /*
+    background-image: url('card-background.jpg');
+    background-size: cover; *//* Or 'contain', depending on the image aspect ratio */
+    /* background-position: center center;
+    background-repeat: no-repeat;
+    */
+    /* --- End Background Options --- */
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 25px; /* Adjusted spacing */
+    z-index: 1;
+}
+
+.number {
+    font-size: 110px; /* Slightly larger */
+    font-weight: 700; /* Bold */
+    color: rgba(255, 255, 255, 0.55); /* Adjusted transparency */
+    line-height: 1;
+    flex-shrink: 0; /* Prevent number from shrinking if card is too narrow */
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-content h1 {
+    font-size: 40px; /* Slightly larger */
+    font-weight: 700; /* Bold */
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: 1.5px; /* Slightly increased spacing */
+    text-transform: uppercase; /* Make sure it's uppercase like image */
+}
+
+.text-content p {
+    font-size: 17px; /* Slightly larger */
+    font-weight: 400; /* Regular weight */
+    margin: 5px 0 0 0;
+    opacity: 0.9;
+}
