@@ -22,27 +22,3 @@ for (let i = 0; i < totalDots; i++) {
 
   grid.appendChild(dot);
 }
-const grids = document.getElementById("dotGrids");
-const dotSizes = 6 + 6; // 5px dot + 3px margin both sides
-// const columns = Math.floor(window.innerWidth / dotSize);
-// const rows = Math.floor(window.innerHeight / dotSize);
-// const columns = 33;
-// const rows = 24;
-const column = 41;
-const row = 29;
-const totalDot = columns * rows;
-
-for (let i = 0; i < totalDots; i++) {
-  const dot = document.createElement("div");
-  dot.classList.add("dots");
-
-  const row = Math.floor(i / columns);
-  const distanceFromCenter = Math.abs(row - rows / 2);
-  const maxDistance = rows / 2;
-
-  // Opacity fades toward top and bottom
-  const opacity = 0.1 + (1 - distanceFromCenter / maxDistance) * 0.1;
-  dot.style.backgroundColor = `rgba(0, 0, 0, ${opacity.toFixed(2)})`;
-
-  grid.appendChild(dot);
-}

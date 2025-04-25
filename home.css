@@ -161,11 +161,11 @@
     right: 5%;
   }
 
-  .logo-button {
-    width: 50px;
-    height: 50px;
+  /* .logo-button {
+    width: 100px;
+    height: 68px;
     background-color: #fff;
-    border-radius: 50%;
+    border-radius: 28px;
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -178,7 +178,60 @@
   .logo-button img {
     width: 24px;
     height: 24px;
+  } */
+
+  .logo-button {
+    width: 70px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 28px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s ease; /* Ensures smooth width expansion */
+    overflow: hidden; /* Prevents content from overflowing */
   }
+  
+  .logo-button img {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    transition: opacity 0.3s ease; /* Smooth transition to hide the image */
+  }
+
+  
+  .logo-textarea {
+    width: 0;
+    height: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 2px;
+    font-size: 14px;
+    background-color: transparent;
+    display: block;
+    opacity: 0; /* Initially hidden */
+    transition: width 0.3s ease, opacity 0.3s ease; /* Smooth width and opacity change */
+  }
+  
+  .logo-button:hover {
+    width: 200px; /* Expands the width on hover */
+  }
+  
+  .logo-button:hover img {
+    opacity: 0; /* Hides the image smoothly */
+  }
+  
+  .logo-button:hover .logo-textarea {
+    width: 100%; /* Expands the textarea */
+    opacity: 1; /* Shows the textarea */
+  }
+  
+  
 
   @media (max-width: 768px) {
     .hero-title {
@@ -234,7 +287,7 @@
   }
   @media (max-width: 768px) {
     .sec-c {
-      height: 1600px !important;
+      height: 1350px !important;
     }
   
     .row.mt-4 {
@@ -253,7 +306,30 @@
       font-size: 35px !important;
       line-height: 35px !important;
     }
+  .dot-grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw !important;
+    padding-top: 70px !important;
+  } 
+  .dot-grid p{
+    font-size: 60px !important;
+    margin-top: 5px !important;
+  }
+  .third-cd p{
+    font-size: 23px !important;
+    line-height: 38px !important;
+    margin-top: 15px !important;
+  }
 
+  .dot {
+    width: 4px !important;
+    height: 5px !important;
+    margin: 0px !important;
+    border-radius: 50%;
+    margin-top: 4px !important;
+    background-color: black;
+  }
     .third-card1 {
       width: 216px !important;
       height: 133px !important;
@@ -293,6 +369,16 @@
     .d-flex.flex-wrap {
       flex-wrap: nowrap !important;
       justify-content: center !important;
+    }
+    .four-c p{
+      font-size: 30px !important;
+      line-height: 35px !important;
+    }
+    .four-cd{
+      width: 100% !important;
+      height: 40% !important; 
+      margin-top: 16rem !important;
+
     }
   }
 
